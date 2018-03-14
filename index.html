@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- W3 CSS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<!-- Custom Css -->
+  	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Iron Hacks</title>
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header col-md-6">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><b>NEW YORK</b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav menu col-md-6">
+            <li class="active"><a href="#myCarousel" class="toMove">HOME</a></li>
+            <li><a href="#information" class="toMove">INFORMATION</a></li>
+            <li><a href="#map" class="toMove">MAP</a></li>
+            <li><a href="#d3js" class="toMove">GRAPH</a></li>
+            <li><a href=".w3-card-4" class="toMove">CONTACT US</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CAROUSEL -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <a href="https://imgur.com/qpoKOo6"><img src="https://i.imgur.com/qpoKOo6.jpg" title="source: imgur.com" /></a>
+          <div class="carousel-caption">
+            <h3>Statue of Liberty</h3>
+            <p>What a wonderful country</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <a href="https://imgur.com/XdPDH94"><img src="https://i.imgur.com/XdPDH94.jpg" title="source: imgur.com" /></a>
+          <div class="carousel-caption">
+            <h3>Time Square</h3>
+            <p>I don't want to go home</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <a href="https://imgur.com/LFnM4Je"><img src="https://i.imgur.com/LFnM4Je.jpg" title="source: imgur.com" /></a>
+          <div class="carousel-caption">
+            <h3>New York</h3>
+            <p>We love the Big Apple!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- INFO -->
+    <div class="jumbotron" id="information">
+      <h2><b>INFORMATION</b></h2><br>
+      <p>This site was designed to help new students <br> who wish to move to New
+         York City <br> more specifically NYU Stern School of Business students.</p>
+    </div>
+    <!-- MAP -->
+
+    <!--BUTTONS-->
+    <div id="mydiv">
+      <div id="mydivheader"><b>My notebook</b></div>
+      <textarea name="name" rows="4" cols="40" placeholder="My notes..."></textarea>
+    </div>
+    <div class="row">
+      <div class="col-md-12" id="filters">
+        <h2 class="title" id="interactive"><b>INTERACTIVE MAP</b>
+      </div>
+      <div class="col-xs-11 col-sm-12 col-md-5" id="parameters">
+        <div class="inputs">
+          <h3><b>Filters for select a rent house</b></h3><br>
+          <br><p>Min Price</p>
+          <input type="text" id="min">
+          <p><br>Max Price</p>
+          <input type="text" id="max">
+        </div>
+        <br><p><br>View your notebook*</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round" id="note"></span>
+        </label>
+        <br><sub id="sub">*You can move it</sub>
+        <div class="boton">
+          <button type="button" class="btn btn-default" id="btnHouse">Search Rent Houses</button>
+        </div>
+      </div>
+      <img class="hidden-xs col-sm-12 col-md-7" src="https://i.imgur.com/HZ11sCW.jpg" alt="New York">
+      <div class="col-xs-12 col-sm-6 col-md-8" id="map"></div>
+      <div class="col-xs-12 col-sm-6 col-md-4" id="buttons">
+        <h3 id="mark">
+          <button type="button" class="btn fa fa-sort-alpha-asc"></button>
+          <b>Show the markers</b>
+        </h3>
+        <ul id="list">
+          <li style="list-style-type:none">
+            <p title="Art">Art</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnArt"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Bank">Bank Atm</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnBank"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Beach">Beach</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnBeach"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Bicycle Parkig">Bicycle Parking</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnBike"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Cycle Paths">Cycle Paths</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnPaths"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Crime">Crime</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnCrime"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Fire Departments">Fire Departments</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnFire"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Museums">Museums</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnMuseum"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Police Precints">Police Precints</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnPolicepre"></span>
+            </label>
+          </li>
+          <li style="list-style-type:none">
+            <p title="Vaccination Places">Vaccination Places</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="btnVac"></span>
+            </label>
+          </li>
+
+        </ul>
+        <h3 id="markTem" title="Temperature Today"><b><i class="fa fa-thermometer-half"></i> Today's temperature</b></h3>
+        <div id="tempContainer">
+          <h4><b>New York</b></h4>
+          <p>Temp: <i id="temp"></i> °C</p>
+          <p>Humidity: <i id="humidity"></i> %</p>
+          <p>Pressure: <i id="pressure"></i> hPa</p>
+          <p>Wind Deg: <i id="windDeg"></i> °</p>
+          <p>Wind Speed: <i id="wind"></i> meter/sec</p>
+        </div>
+      </div>
+    </div>
+    <h3 id="d3js"><i class="fa fa-area-chart" style="font-size:36px"></i><b> Temperature Graph</b></h3>
+    <div class="containerSvg">
+      <button type="button" class="btn btn-default" onclick="updateMaxTemp()">Max Temperature(°C) 2017</button>
+      <svg></svg>
+    </div>
+
+
+    <!--  Contact us -->
+    <div class="w3-card-4">
+      <div class="w3-container w3-black">
+        <h3 title="Contact Us">Contact Us</h3>
+      </div>
+      <div class="w3-container" id="data">
+        <p>
+          <label class="w3-text-black"><b>First Name</b></label>
+          <input class="w3-input w3-border w3-light-grey" name="first" type="text" placeholder="First Name">
+        </p>
+        <p>
+          <label class="w3-text-black"><b>Last Name</b></label>
+          <input class="w3-input w3-border w3-light-grey" name="last" type="text" placeholder="Last Name">
+        </p>
+        <p>
+          <label class="w3-text-black"><b>Email</b></label>
+          <input class="w3-input w3-border w3-light-grey" name="last" type="text" placeholder="Email">
+        </p>
+        <p>
+          <label class="w3-text-black"><b>Phone Number</b></label>
+          <input class="w3-input w3-border w3-light-grey" name="last" type="text" placeholder="Phone Number">
+        </p>
+        <p>
+          <label class="w3-text-black"><b>Description</b></label>
+          <input class="w3-input w3-border w3-light-grey" name="last" type="text" placeholder="Description">
+        </p>
+        <p>
+          <button class="w3-btn w3-black" id="register">Register</button>
+        </p>
+      </div>
+    </div>
+    <!--  Footer -->
+    <footer id="footer">
+      <div class="container">
+        <p class="copy">New York &copy; 2017 | Brandon Avilán</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+  	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- d3js -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  	<!-- importGoogleMaps -->
+  	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPs9AAS6xg3-C5ipnD_qCp7OT8npZt6S0&callback=initMap"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+</html>

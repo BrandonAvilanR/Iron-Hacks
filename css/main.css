@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html, body {
+  background: #333;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+.navbar{
+  margin-bottom: 0px;
+}
+#information{
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+}
+.carousel{
+  width: 100%;
+}
+#filters{
+  background-color: #fff;
+}
+#interactive{
+  text-align: center;
+  margin-left: 0%;
+}
+.title{
+  color: #333;
+  text-align: left;
+  margin-left: 10%;
+  margin-bottom: 0px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+#parameters{
+  color: #fff;
+  background-color: #333;
+  padding: 5% 0% 1% 5%;
+}
+#max, #min{
+  text-align: left;
+  color: #333;
+}
+#slidecontainer {
+  width: 50%;
+}
+/*Write Tool*/
+#mydiv {
+  position: absolute;
+  display: none;
+  z-index: 9;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px 0px 15px #220101;
+}
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #333;
+  color: #fff;
+}
+textarea{
+  margin-bottom: -5px;
+}
+.boton{
+  padding-left: 60%;
+}
+#btnHouse{
+  position:static;
+}
+/*Map*/
+#map {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 25%;
+  padding-top: 25%;
+  position: center;
+  max-width: 100%;
+  margin: 0px 0px 0px 15px;
+}
+#buttons{
+  padding-right: 0%;
+  margin-left: -15px;
+}
+#mark, #markTem{
+  background-color: #fff;
+  margin-top: 0px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  margin-bottom: 0px;
+  border-bottom: solid;
+  border-bottom-color: #333;
+}
+#list{
+  color: #fff;
+  background-color: #333;
+  max-height: 352px;
+  margin-bottom: 0px;
+  /*display: none;*/
+  overflow-y: scroll;
+}
+#tempContainer{
+  color: #fff;
+  background-color: #333;
+  padding: 5% 10% 5% 10%;
+  max-height: 350px;
+  /*display: none;*/
+  overflow-y: scroll;
+  border-bottom: solid;
+  border-bottom-color: #333;
+}
+#d3js{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #333;
+  color: #fff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  border-bottom: solid;
+  border-bottom-color: #fff;
+}
+.w3-card-4{
+  margin: 5% 15% 5% 15% !important;
+  box-shadow: 0px 0px 20px #ebe9e9 !important;
+}
+#data{
+  padding-top: 10px;
+}
+.w3-container{
+  background-color: #fff !important;
+}
+.w3-black {
+  background-color:#333 !important;
+}
+.w3-text-black{
+  color: #333 !important;
+}
+#footer{
+  background-color: #fff;
+  color: #333;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+/*BUTTONS SWICH*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  box-shadow: 0px 0px 4px #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #333;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*D3JS*/
+.containerSvg{
+  padding: 2rem 3rem;
+  background-color:#fff;
+  height: 400px;
+  width: 100%;
+  text-align:center;
+}
+svg{
+  height:inherit;
+  width:inherit;
+  float:center;
+  align-self:center;
+}
+.area {
+  fill: rgba(161, 153, 153, 0.5);
+}
